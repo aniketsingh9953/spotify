@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    font-family: 'Cabin', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 45px;
+    padding: 0 7px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 30px;
+    background-image: url("bg.jpg");
+    background-size: cover;
+}
+
+#progBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.bottom {
+    position: sticky;
+    height: 110px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon {
+    margin-top: 10px;
+}
+
+.icon i {
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 35px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.songItem img {
+    height: 50px;
+    margin: 0 12px;
+    border-radius: 30px;
+}
+
+.timestamp {
+    margin: 0 20px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Pacifico', cursive;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+@media screen and (max-width:700px) {
+    .icon {
+        margin-top: 30px;
+    }
+
+    .songInfo {
+        position: absolute;
+        left: 10vw;
+        font-family: 'Pacifico', cursive;
+        top: 4vh;
+    }
+
+    .songItem {
+        height: 61px;
+        display: flex;
+        background-color: white;
+        color: black;
+        margin: 12px 0;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+    }
+
+    .timestamp {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:358px) {
+    .songItem {
+        height: 80px;
+        display: flex;
+        background-color: white;
+        color: black;
+        margin: 12px 0;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width:282px) {
+    .songItemContainer {
+        margin-top: 35px;
+        display: inline-block;
+        width: 80vw;
+    }
+    .timestamp{
+        display: none;
+    }
+}
