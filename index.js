@@ -99,7 +99,7 @@ document.getElementById("previous").addEventListener("click",()=>{
 })
 audioElement.addEventListener("ended", function () {
     songIndex = songIndex + 1;
-    if(songIndex>=5){
+    if(songIndex>5){
         songIndex=0;
     }
     audioElement.src =`songs/${songIndex + 1}.mp3`;
