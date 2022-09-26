@@ -97,3 +97,15 @@ document.getElementById("previous").addEventListener("click",()=>{
         masterPlay.classList.remove("fa-circle-play");
         masterPlay.classList.add("fa-circle-pause");
 })
+audioElement.addEventListener("ended", function () {
+    songIndex = songIndex + 1;
+    if(songIndex>=5){
+        songIndex=0;
+    }
+    audioElement.src =`songs/${songIndex + 1}.mp3`;
+    audioElement.play();
+    masterSongName.innerText = songs[songIndex].songName;
+    gif.style.opacity = 1;
+    masterPlay.classList.remove("fa-circle-play");
+    masterPlay.classList.add("fa-circle-pause");
+});
